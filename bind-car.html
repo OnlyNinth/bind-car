@@ -6,7 +6,8 @@
 <title>绑定车牌</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
-<link href="./weui.css" rel="stylesheet">
+<link rel="stylesheet" href="./mui.min.css">
+<link rel="stylesheet" href="./bind-car.css">
 <script src="./fastclick.js"></script>
 <script>
     if ("addEventListener" in document) {
@@ -15,55 +16,6 @@
         }, false);
     }
 </script>
-<style>
-    body {font-family: "microsoft yahei", "冬青", 'Helvetica Neue', 'Helvetica', 'sans-serif'; background: transparent; color: #696969;}
-    div {box-sizing: border-box;}
-    .mb10 {margin-bottom: 10px;}
-    .ft20 {font-size: 20px;}
-    .display-flex {display: -webkit-flex;}
-    .flex1 {flex: 1;}
-    .hide {display: none;}
-    .pr {position: relative;}
-    @font-face {
-      font-family: 'iconfont';  /* project id 67492 */
-      src: url('https://at.alicdn.com/t/font_67492_rkl9k8gvmg6i529.eot');
-      src: url('https://at.alicdn.com/t/font_67492_rkl9k8gvmg6i529.eot?#iefix') format('embedded-opentype'),
-      url('https://at.alicdn.com/t/font_67492_rkl9k8gvmg6i529.woff') format('woff'),
-      url('https://at.alicdn.com/t/font_67492_rkl9k8gvmg6i529.ttf') format('truetype'),
-      url('https://at.alicdn.com/t/font_67492_rkl9k8gvmg6i529.svg#iconfont') format('svg');
-    }
-
-    .tip-wrap {padding: 20px;}
-    .tip-wrap .tit {color: #1FCA3B!important; font-size: 18px;}
-    .tip-wrap p {font-size: 14px; line-height: 20px; color: #B8B8B8;}
-    .car-no {margin: 18px 10px 0 10px; padding-top: 4px; padding-bottom: 4px; height: 44px; border: 1px solid rgb(184, 184, 184); border-radius: 3px; text-align: center;}
-    .car-no .no-item {position: relative; margin-left: 1px; margin-right: 2px; line-height: 34px; border-radius: 3px;}
-    .short-border:after {position: absolute; top: 0; right: -1px; margin-top: 7px; margin-right: -2px; width: 0; height: 20px; display: block; border-right: 1px solid; content: ''; color: #E0E0E0; }
-    .car-no .no-active {border: 1px solid #1FCA3B;}
-    .new-car-wrap {margin-top: 10px; margin-right: 10px; font-size: 12px; color: #222; text-align: right;}
-    .btn-submit {margin: 26px auto 0; width: 85%;}
-
-    .keyboard-wrap {position: fixed; bottom: 0; right: 0; left: 0; background: rgb(204, 204, 204); height: 230px; border-top: 1px solid rgb(238, 238, 238);}
-    .keyboard-wrap .keyboard-done {padding-right: 15px;line-height: 34px; font-size: 14px; color: #1FCA3B; background: #fff; text-align: right;}
-    .keyboard-wrap .key-list {width: 100%; margin: 10px 0 0; list-style: none;}
-    .key-list li {margin: 0 0 7px; float: left; width: 10%; text-align: center;}
-    .key-list li button {width: 90%; height: 38px; display: inline-block; background: #fff; border-radius: 3px; font: 19px/38px "microsoft yahei","冬青"; color: #222; border: none;}
-    .key-list li button:disabled {opacity: .6; color: #222!important; background: #fff; border: 1px solid #d9d9da!important;}
-    .keyboard-wrap .cancel {position: relative;}
-    .cancel .delete {position: absolute; top: 135px; right: -5px; clear: both; width: 18%; height: 38px; color: #222; line-height: 38px; font: 20px/38px "microsoft yahei","冬青"; background: #b8b8b8; border-radius: 3px; text-align: center;}
-    .cancel .delete:before {content: "\e721";}
-    .iconfont{font-family: "iconfont" !important; font-size: 20px; font-style: normal; color: #1FCA3B; -webkit-font-smoothing: antialiased; -webkit-text-stroke-width: 0.2px; -moz-osx-font-smoothing: grayscale; margin-right: 12px;}
-    .character {position: absolute; top: -55px; left: -150px;padding-top: 7px; padding-left: 7px; padding-right: 0; background: #fff; width: 290px; height: 40px; box-shadow: 2px 2px 2px #e3e3e3; list-style: none;}
-    .character:after {position: relative; top: -5px; left: 15px; content: ''; display: inline-block; height: 0; border-top: 10px solid #fff; border-left: 10px solid transparent; border-right: 10px solid transparent;}
-    .character li {margin: 0!important; width: 35px!important; height: 35px!important;}
-    .character li button {width: 30px!important; height: 35px!important; line-height: 35px!important;border: 1px solid #ccc;}
-    button.btn:not(:disabled){animation: bgGradient 0.4s;}
-    @-webkit-keyframes bgGradient{
-        0%{background: #fff;}
-        50%{background: #1FCA3B;}
-        100%{background: #fff;}
-    }
-</style>
 </head>
 <body>
     <div class="tip-wrap">
@@ -76,14 +28,14 @@
             <div v-for="(item, i) in carNo" @click="clickNo(i)" class="no-item flex1" :class="{'no-active': index == i, 'short-border': i != carNo.length - 1}">{{ item }}</div>
             
         </div>
-        <div class="new-car-wrap">
-            <label>
-                <input v-model="seen" type="checkbox" class="weui-agree__checkbox">
+        <div class="new-energy-wrap">
+            <label @click="clickNewEnergy">
+                <span v-model="seen" type="checkbox" class="new-energy" :class="{'checkedBg': seen, 'uncheckedBg': !seen}"></span>
                 <span>新能源车牌</span>
             </label>
         </div>
         <div class="btn-submit">
-            <a @click="submit" href="javascript:;" class="weui-btn weui-btn_primary">确认</a>
+            <a @click="submit" href="javascript:;" class="btn-primary">确认</a>
         </div>
         <div class="keyboard-wrap" :class="{'hide': !seenProvince}">
             <p class="keyboard-done">
@@ -118,8 +70,9 @@
         </div>
     </div>
 
-    <script src="vue.min.js"></script>
-    <!-- <script src="./weui.min.js"></script> -->
+    <script src="./vue.min.js"></script>
+    <script src="./mui.min.js"></script>
+    <script src="./common.js"></script>
     <script>
         var provinces = "京,沪,浙,苏,粤,鲁,晋,冀,豫,川,渝,辽,吉,黑,皖,鄂,湘,赣,闽,陕,甘,宁,蒙,津,贵,云,桂,琼,青,新,藏,使";
         var carNumbers = "0,1,2,3,4,5,6,7,8,9,Q,W,E,R,T,Y,U,I,O,P,A,S,D,F,G,H,J,K,L,Z,X,C,V,B,N,M,字";
@@ -130,7 +83,7 @@
             data: {
                 index: -1,
                 seen: false, // 新能源车
-                carNo: ['粤', '', '', '', '', '', ''],
+                carNo: ['', '', '', '', '', '', ''],
                 seenProvince: false, // 显示省份键盘
                 seenCarNo: false, // 显示车牌号键盘
                 seenCharacter: false, // 显示字
@@ -150,6 +103,10 @@
                         that.seenProvince = false;
                         that.seenCarNo = true;
                     }
+                },
+                clickNewEnergy: function () {
+                    var that = this;
+                    that.seen = !that.seen;
                 },
                 clickKeyboard: function (event) { // 点击键盘
                     var that = this,
@@ -200,7 +157,15 @@
                     }
                 },
                 submit: function () { // 提交数据
-                    console.log(this.carNo);
+                    var that = this,
+                        carNoStr = that.carNo.join(''),
+                        carNolen = carNoStr.length;
+                    if ((!that.seen && 7 > carNolen) || (that.seen && 8 > carNolen)) {
+                        mui.toast('请输入完整车牌号');
+                        return;
+                    }
+                    console.log(carNoStr);
+                    // ajax(url, {}, function () {});
                 }
             },
             watch: {

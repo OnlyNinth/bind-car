@@ -1,0 +1,65 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section 
+{margin: 0; padding: 0;box-sizing: border-box;}
+a {text-decoration: none;}
+body {font-family: "microsoft yahei", "冬青", 'Helvetica Neue', 'Helvetica', 'sans-serif'; background: transparent; color: #696969;}
+.mb10 {margin-bottom: 10px;}
+.ft20 {font-size: 20px;}
+.display-flex {display: -webkit-flex;}
+.flex1 {flex: 1;}
+.hide {display: none;}
+.pr {position: relative;}
+@font-face {
+  font-family: 'iconfont';  /* project id 67492 */
+  src: url('https://at.alicdn.com/t/font_67492_rkl9k8gvmg6i529.eot');
+  src: url('https://at.alicdn.com/t/font_67492_rkl9k8gvmg6i529.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_67492_rkl9k8gvmg6i529.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_67492_rkl9k8gvmg6i529.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_67492_rkl9k8gvmg6i529.svg#iconfont') format('svg');
+}
+.checkedBg{
+    position: relative;
+    top: 2px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpiYzA4YmM3MC1mZjQ5LWQyNDQtYTRhNy1jMTAwMmI0ZjJhMWYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6M0Y3N0FGQzM1MkY3MTFFNkEzODBFNEI2NzJFQ0NCNDEiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6M0Y3N0FGQzI1MkY3MTFFNkEzODBFNEI2NzJFQ0NCNDEiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk2NGViOGYzLWZmN2UtZWU0ZC04MTg0LTk1NDJkNzdmMDViMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpiYzA4YmM3MC1mZjQ5LWQyNDQtYTRhNy1jMTAwMmI0ZjJhMWYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6futfNAAABWUlEQVR42rSVTUsCURSGr5eRtPQ35K5de7HamEThTtf+Alvkx8/oA3LTttZBQjiUCoI7N/pHDIKSoEW+B86Fy8VxRud04RmZGed579yPOYn9SSGrlOqACthTMu0bPIO6h8M9qIEheAWLmPJdUGanSuANvvA7BhfgT8m1PshrHhZfWE6tR27NJ79Kvv3QQQtLT8A7ODAXPGE5DXUa5MxFLSjvsbwB3iTf4NhMKLgCd/ZNLSD3g+RxA+yeN1bJ3QAarnOwE0F+xPIMy2+D/mgHVPmhLkiFyP0ocjeAHpqBM/ASEGLLm2FyN+ATnK4JsYelBW6iTJQ7yXMOmTohBZZnWX4ddSWs2gcUUuKvIYUMwOE28nXL1IRMufckb28qD9vJJuQBjLjqKckAE1KNs9XNECX/oR6kTMAH72DpRiV44XGhr/FqkSz6RfBEAZfWp6Io1Hvq5CO5lwIMAExuRyT+agcDAAAAAElFTkSuQmCC");
+    background-position: center;
+    background-size: 12px 12px;
+}
+.uncheckedBg{
+    position: relative;
+    top: 2px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpiYzA4YmM3MC1mZjQ5LWQyNDQtYTRhNy1jMTAwMmI0ZjJhMWYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6M0Y3N0FGQzc1MkY3MTFFNkEzODBFNEI2NzJFQ0NCNDEiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6M0Y3N0FGQzY1MkY3MTFFNkEzODBFNEI2NzJFQ0NCNDEiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk2NGViOGYzLWZmN2UtZWU0ZC04MTg0LTk1NDJkNzdmMDViMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpiYzA4YmM3MC1mZjQ5LWQyNDQtYTRhNy1jMTAwMmI0ZjJhMWYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5sbCcLAAAAoElEQVR42mKUP2XNy8DAMAWIg4GYm4E64CsQrwXiHBYgMRmI44B4LxBvAeJvFBrOBcQ+UDMZGIE++AKkjwOxGxD/Z6Ae2A3ElkzQYNlGZcMZoGZyM0E5PxioD8BmMjHQGIxaMGrBqAWjFoxaQE0LOGhgNgfMgndA7EkDC7xA9TsLtKIHVdB7qFzpOwPxYpAFuVCJEKggNQDIkYtAZgMEGADDixw/dBP5UgAAAABJRU5ErkJggg==");
+    background-position: center;
+    background-size: 12px 12px;
+}
+.btn-primary {position: relative; display: block; margin-left: auto; margin-right: auto; padding-left: 14px; padding-right: 14px; box-sizing: border-box; font-size: 18px; text-align: center; text-decoration: none; color: #FFFFFF; line-height: 2.55555556; border-radius: 5px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); overflow: hidden; background-color: #1AAD19;}
+
+.tip-wrap {padding: 20px;}
+.tip-wrap .tit {color: #1FCA3B!important; font-size: 18px;}
+.tip-wrap p {font-size: 14px; line-height: 20px; color: #B8B8B8;}
+.car-no {margin: 18px 10px 0 10px; padding-top: 4px; padding-bottom: 4px; height: 44px; border: 1px solid rgb(184, 184, 184); border-radius: 3px; text-align: center;}
+.car-no .no-item {position: relative; margin-left: 1px; margin-right: 2px; line-height: 34px; border-radius: 3px;}
+.short-border:after {position: absolute; top: 0; right: -1px; margin-top: 7px; margin-right: -2px; width: 0; height: 20px; display: block; border-right: 1px solid; content: ''; color: #E0E0E0; }
+.car-no .no-active {border: 1px solid #1FCA3B;}
+.new-energy-wrap {margin-top: 10px; margin-right: 10px; font-size: 12px; color: #222; text-align: right;}
+.new-energy {display: inline-block; width: 12px; height: 12px;}
+.btn-submit {margin: 26px auto 0; width: 85%;}
+
+.keyboard-wrap {position: fixed; bottom: 0; right: 0; left: 0; background: rgb(204, 204, 204); height: 230px; border-top: 1px solid rgb(238, 238, 238);}
+.keyboard-wrap .keyboard-done {padding-right: 15px;line-height: 34px; font-size: 14px; color: #1FCA3B; background: #fff; text-align: right;}
+.keyboard-wrap .key-list {padding-left: 2px; padding-right: 2px; width: 100%; margin: 10px 0 0; list-style: none;}
+.key-list li {margin: 0 0 7px; float: left; width: 10%; text-align: center;}
+.key-list li button {width: 90%; height: 38px; display: inline-block; background: #fff; border-radius: 3px; font: 19px/38px "microsoft yahei","冬青"; color: #222; border: none;}
+.key-list li button:disabled {opacity: .6; color: #222!important; background: #fff; border: 1px solid #d9d9da!important;}
+.keyboard-wrap .cancel {position: relative;}
+.cancel .delete {position: absolute; top: 135px; right: -5px; clear: both; width: 18%; height: 38px; color: #222; line-height: 38px; font: 20px/38px "microsoft yahei","冬青"; background: #b8b8b8; border-radius: 3px; text-align: center;}
+.cancel .delete:before {content: "\e721";}
+.iconfont{font-family: "iconfont" !important; font-size: 20px; font-style: normal; color: #1FCA3B; -webkit-font-smoothing: antialiased; -webkit-text-stroke-width: 0.2px; -moz-osx-font-smoothing: grayscale; margin-right: 12px;}
+.character {position: absolute; top: -53px; left: -187px;padding-top: 5px; padding-left: 7px; padding-right: 0; background: #fff; width: 290px; height: 45px; box-shadow: 2px 2px 2px #e3e3e3; list-style: none;}
+.character:after {position: relative; top: -5px; left: 54px; content: ''; display: inline-block; height: 0; border-top: 10px solid #fff; border-left: 10px solid transparent; border-right: 10px solid transparent;}
+.character li {margin: 0!important; width: 35px!important; height: 35px!important;}
+.character li button {width: 30px!important; height: 35px!important; line-height: 35px!important;border: 1px solid #ccc;}
+button.btn:not(:disabled){animation: bgGradient 0.4s;}
+@-webkit-keyframes bgGradient{
+    0%{background: #fff;}
+    50%{background: #1FCA3B;}
+    100%{background: #fff;}
+}
